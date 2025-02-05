@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Videos - Lorraine Adebowale">
+    <Navigation />
+    <main>
+        <section class="videos-hero">
+            <h1>Insights & Inspiration</h1>
+            <p>Watch and enjoy Lorraine's transformative talks and insights</p>
+        </section>
+
+        <section class="videos-grid">
+            <div class="container">
+                <div class="featured-video">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls>
+                                <source src="https://res.cloudinary.com/dydlkejl0/video/upload/v1738686007/What_matters_cdqcj6.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h2>What Matters</h2>
+                        <p>Discover the essential elements that truly make a difference in your personal and professional journey.</p>
+                    </div>
+                </div>
+                
+                <div class="secondary-videos">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls>
+                                <source src="https://res.cloudinary.com/dydlkejl0/video/upload/v1737651274/Three_reasons_you_re_not_successful_fxovqw.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h2>Three Reasons You're Not Successful</h2>
+                        <p>Uncover the key obstacles that might be holding you back from achieving your full potential.</p>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls>
+                                <source src="https://res.cloudinary.com/dydlkejl0/video/upload/v1737651270/How_failure_has_fuelled_me_s8utvd.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h2>How Failure Has Fuelled Me</h2>
+                        <p>Learn how setbacks and challenges can become powerful catalysts for growth and success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+        padding-top: 60px;
+    }
+
+    .videos-hero {
+        background: rgba(var(--accent-dark), 0.3);
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .videos-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--accent-light));
+    }
+
+    .videos-hero p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .videos-grid {
+        padding: 6rem 0;
+        background: rgba(var(--accent-dark), 0.1);
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .featured-video {
+        margin-bottom: 4rem;
+    }
+
+    .featured-video .video-card {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .secondary-videos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .video-card {
+        background: rgba(35, 38, 45, 0.8);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .video-wrapper {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(var(--accent-dark), 0.2);
+    }
+
+    .video-card h2 {
+        font-size: 1.5rem;
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    .video-card p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 1024px) {
+        .secondary-videos {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .videos-hero {
+            padding: 4rem 1rem;
+        }
+
+        .videos-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .videos-hero p {
+            font-size: 1.2rem;
+        }
+
+        .videos-grid {
+            padding: 4rem 1rem;
+        }
+
+        .secondary-videos {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .featured-video {
+            margin-bottom: 2rem;
+        }
+    }
+</style>

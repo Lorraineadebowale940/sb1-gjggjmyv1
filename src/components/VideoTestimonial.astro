@@ -1,0 +1,63 @@
+---
+interface Props {
+    title?: string;
+}
+
+const { title = "Featured Testimonial" } = Astro.props;
+---
+
+<section class="video-testimonial">
+    <div class="container">
+        <h2>{title}</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="https://res.cloudinary.com/dydlkejl0/video/upload/v1738682743/Alya_Leuca_Testimonial_nyqdeb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</section>
+
+<style>
+    .video-testimonial {
+        padding: 6rem 0;
+        background: rgba(var(--accent-dark), 0.1);
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .video-testimonial h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: rgb(var(--accent-light));
+        margin-bottom: 3rem;
+    }
+
+    .video-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    video {
+        width: 100%;
+        display: block;
+        background: rgba(var(--accent-dark), 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .video-testimonial {
+            padding: 4rem 1rem;
+        }
+        
+        .video-wrapper {
+            max-width: 100%;
+        }
+    }
+</style>

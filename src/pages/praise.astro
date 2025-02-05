@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import VideoTestimonial from '../components/VideoTestimonial.astro';
+---
+
+<Layout title="Praise - Lorraine Adebowale">
+    <Navigation />
+    <main>
+        <section class="praise-hero">
+            <h1>Client Success Stories</h1>
+            <p>Hear directly from clients who have experienced transformation through our work together</p>
+        </section>
+
+        <VideoTestimonial />
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <img 
+                            src="https://res.cloudinary.com/dydlkejl0/image/upload/v1738682738/Deborah_Farquahar_Testimonial_pdobwb.png" 
+                            alt="Testimonial from Deborah Farquhar"
+                        />
+                    </div>
+                    <div class="testimonial-card">
+                        <img 
+                            src="https://res.cloudinary.com/dydlkejl0/image/upload/v1738682737/1612373302_Charlie_Fleet_Testimonial_o12sw8.png" 
+                            alt="Testimonial from Charlie Fleet"
+                        />
+                    </div>
+                    <div class="testimonial-card">
+                        <img 
+                            src="https://res.cloudinary.com/dydlkejl0/image/upload/v1738682732/Lauren_Roberts_Testimonial_oyasnv.png" 
+                            alt="Testimonial from Lauren Roberts"
+                        />
+                    </div>
+                    <div class="testimonial-card">
+                        <img 
+                            src="https://res.cloudinary.com/dydlkejl0/image/upload/v1737651223/Jon_Wycher_Testimonial_seufif.png" 
+                            alt="Testimonial from Jon Wycher"
+                        />
+                    </div>
+                    <div class="testimonial-card">
+                        <img 
+                            src="https://res.cloudinary.com/dydlkejl0/image/upload/v1738682729/Lia_Testimonial_qtqcho.png" 
+                            alt="Testimonial from Lia"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Write Your Success Story?</h2>
+                <p>Join our community of transformed professionals and take the first step towards your goals.</p>
+                <a href="/contact" class="cta-button">Start Your Journey</a>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+        padding-top: 60px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .praise-hero {
+        background: rgba(var(--accent-dark), 0.3);
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .praise-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--accent-light));
+    }
+
+    .praise-hero p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .testimonials {
+        padding: 6rem 0;
+        background: rgba(var(--accent-dark), 0.2);
+    }
+
+    .testimonials h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: rgb(var(--accent-light));
+        margin-bottom: 3rem;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .testimonial-card {
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .testimonial-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .cta-section {
+        background: rgb(var(--accent));
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: white;
+        color: rgb(var(--accent));
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .praise-hero {
+            padding: 4rem 1rem;
+        }
+
+        .praise-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .praise-hero p {
+            font-size: 1.2rem;
+        }
+
+        .testimonials {
+            padding: 4rem 1rem;
+        }
+
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-section {
+            padding: 3rem 1rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
